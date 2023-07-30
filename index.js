@@ -1,7 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const app = express();
-const router = require('./routes/index');
+const router = require('./src/routes/index');
 const PORT = 3001;
 
 app.use(express.json());
