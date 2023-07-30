@@ -1,13 +1,13 @@
 const express = require('express');
 const morgan = require('morgan');
-const server = express();
+const app = express();
 const router = require('./routes/index');
 const PORT = 3001;
 
-server.use(express.json());
-server.use(morgan('dev'));
+app.use(express.json());
+app.use(morgan('dev'));
 
-server.use((req, res, next) => {
+app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Credentials', 'true');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
@@ -15,8 +15,10 @@ server.use((req, res, next) => {
   next();
 });
 
-server.use('/rickandmorty', router);
+app.use('/rickandmorty', router);
 
-server.listen(PORT, () => {
+app.listen(PORT, () => {
   console.log('Server raised in port: ' + PORT);
 });
+
+module.exports = app;
