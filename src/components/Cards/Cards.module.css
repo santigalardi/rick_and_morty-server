@@ -1,0 +1,9 @@
+.cardsContainer {
+  max-width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: transparent;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}

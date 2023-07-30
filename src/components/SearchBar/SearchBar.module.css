@@ -1,0 +1,39 @@
+.searchBar {
+  display: flex;
+  height: 35px;
+  width: 250px;
+}
+
+.searchBar input {
+  width: 80%;
+  border: 2px solid #c4e246;
+  background-color: #e6f16d;
+}
+
+.searchBar input:focus {
+  border-color: #d7f365;
+  outline: none;
+}
+
+.searchBar input::placeholder {
+  color: #000000; /* Cambia el color del placeholder */
+}
+
+.searchBar input:focus::placeholder {
+  color: #e6f16d; /* Cambia el color del placeholder cuando el input tiene focus */
+}
+
+.searchBar button {
+  width: 20%;
+  background-color: #c4e246;
+  border: none;
+}
+
+.searchBar button:hover {
+  background-color: #b1ed3a;
+  cursor: pointer;
+}
+
+.searchBar button:active {
+  background-color: #f2ff63;
+}
